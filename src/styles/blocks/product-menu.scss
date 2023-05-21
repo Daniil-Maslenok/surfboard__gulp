@@ -1,0 +1,79 @@
+.product-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+}
+
+.product-menu__item {
+  display: flex;
+}
+
+.product-menu__title {
+  width: rem(100px);
+  overflow: hidden;
+  position: relative;
+
+  &.product-menu__title--bg--longboard {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(../img/product-menu/long.png) center center no-repeat;
+    background-size: cover;
+  }
+
+  &.product-menu__title--bg--shortboard {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(../img/product-menu/short.png) left 52% center no-repeat;
+    background-size: cover;
+  }
+  &.product-menu__title--bg--softboard {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(../img/product-menu/soft.png) center center no-repeat;
+    background-size: cover;
+  }
+}
+
+.product-menu__text {
+  display: inline-block;
+  font-size: rem(48px);
+  font-weight: 700;
+  line-height: 1;
+  position: absolute;
+  right: -65%;
+  bottom: 15%;
+  transform: rotate(-90deg);
+}
+
+.product-menu__content {
+  background-color: rgba(51, 53, 55, 0.9);
+  overflow: hidden;
+  position: relative;
+  width: 0;
+  transition: width 0.8s;
+}
+
+.product-menu__container {
+  padding: rem(40px) rem(70px) rem(40px) rem(40px);
+}
+
+.product-menu__close {
+  position: absolute;
+  top: rem(20px);
+  right: rem(25px);
+  background-color: transparent;
+  fill: #fff;
+}
+
+.product-menu__close-elem {
+  height: rem(20px);
+  width: rem(20px);
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.product-menu__desc {
+  font-size: rem(16px);
+}

@@ -1,0 +1,87 @@
+$containerWidth: 940px;
+$baseFontSize: 18px;
+
+// colors
+$blue: #1968b1;
+$yellow: #fedb3f;
+
+// breakpoints
+$tablets: 768px;
+$phones: 480px;
+$phones-plus: 390px;
+
+// z-indexs
+$z-fixed-menu: 100;
+
+@function rem($px) {
+  @return ($px / $baseFontSize + rem);
+}
+
+@mixin tablets {
+  @media screen and (max-width: $tablets) {
+    @content;
+  }
+}
+
+@mixin phones {
+  @media screen and (max-width: $phones) {
+    @content;
+  }
+}
+
+@mixin phones-plus {
+  @media screen and (max-width: $phones-plus) {
+    @content;
+  }
+}
+
+html {
+  font-size: 18px;
+
+  @include tablets {
+    font-size: 18px - 1px;
+  }
+
+  @include phones {
+    font-size: 18px - 2px;
+  }
+}
+
+// breakpoints
+$tablets: 768px;
+$phones: 480px;
+$phones-plus: 390px;
+
+body {
+  font-family: "Alegreya Sans", Helvetica, sans-serif;
+  line-height: 1.42;
+  background: #1968b1;
+
+  @include phones {
+    line-height: 1;
+  }
+}
+
+a {
+  color: inherit;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.maincontent {
+  height: 100%;
+  transition: transform 1s;
+  will-change: transform;
+}
+
+.container {
+  width: 95%;
+  max-width: $containerWidth;
+  margin: 0 auto;
+  position: relative;
+}

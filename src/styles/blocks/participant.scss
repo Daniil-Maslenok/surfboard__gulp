@@ -1,0 +1,96 @@
+.participant {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.participant .active {
+  @include tablets {
+    padding-bottom: 1%;
+  }
+}
+
+.participant__avatar {
+  margin-bottom: rem(20px);
+}
+
+.participant__avatar-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  @include tablets {
+    height: 50%;
+    width: 50%;
+  }
+}
+
+.participant__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  transition: height 0.3s;
+}
+
+.participant__name-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.participant__name {
+  font-size: rem(21px);
+  font-weight: 700;
+  background-color: transparent;
+  margin-bottom: rem(8px);
+
+  &::after {
+    content: "";
+    margin-left: rem(4px);
+    width: rem(9px);
+    height: rem(9px);
+    display: inline-block;
+    background: url(../img/team/triangle.svg) center center no-repeat;
+  }
+}
+
+.team .active {
+  .participant__name::after {
+    transition: 0.5s;
+    transform: rotate(180deg);
+  }
+}
+
+.participant__name--elem {
+  margin-left: rem(4px);
+}
+
+.participant__content {
+  height: 0;
+  overflow: hidden;
+}
+
+.team--desktop-version .participant__content {
+  position: absolute;
+  top: 100%;
+}
+
+.participant__desc {
+  font-size: rem(18px);
+}
+
+.participant__specialty {
+  margin-bottom: rem(4px);
+  font-weight: 700;
+}
+
+.participant__function {
+  font-weight: 300;
+  color: #666;
+}

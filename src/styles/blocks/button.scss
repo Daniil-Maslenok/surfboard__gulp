@@ -1,0 +1,41 @@
+.button {
+  display: inline-block;
+  font-size: rem(16px);
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1;
+  color: #000;
+  padding: rem(23px) rem(45px);
+  background-color: $yellow;
+  border-radius: rem(50px);
+
+  &:hover {
+    background-color: #ffd517;
+  }
+
+  &--theme--transparent {
+    background-color: transparent;
+    color: #fff;
+    font-weight: 400;
+    text-transform: none;
+    font-size: rem(18px);
+    padding: rem(2px);
+    margin-left: rem(18px);
+
+    &:hover {
+      background-color: transparent;
+      color: $yellow;
+    }
+  }
+
+  @include tablets {
+    &--theme--transparent {
+      margin-left: rem(33px);
+    }
+  }
+
+  @include phones {
+    font-size: rem(19px);
+  }
+}

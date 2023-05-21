@@ -1,0 +1,52 @@
+.team-section {
+  justify-content: center;
+}
+
+.team {
+  display: flex;
+
+  @include tablets {
+    justify-content: center;
+  }
+}
+
+.team {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.team--desktop-version {
+  @include tablets {
+    display: none;
+  }
+}
+
+.team--mobile-version {
+  display: none;
+  @include tablets {
+    display: block;
+  }
+}
+
+.team__item {
+  flex: 1;
+  margin: 0 rem(10px);
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include tablets {
+    margin: 0 0 rem(3px) 0;
+  }
+}

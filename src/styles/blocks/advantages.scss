@@ -1,0 +1,31 @@
+.advantages {
+  display: flex;
+}
+
+.advantages__item {
+  margin-right: rem(30px);
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.advantage {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.advantage__icon {
+  width: rem(35px);
+  height: rem(35px);
+  margin-right: rem(17px);
+  fill: white;
+}
+
+.advantage__text {
+  font-size: rem(16px);
+  font-weight: 700;
+  line-height: 1.2;
+  max-width: rem(90px);
+}

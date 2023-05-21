@@ -1,0 +1,51 @@
+.menu {
+  margin: 0 rem(25px);
+  padding-top: rem(5px);
+
+  @include tablets {
+    display: none;
+  }
+}
+
+.menu--overlay {
+  padding: 0;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.menu__list--overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu__item {
+  margin-right: rem(22px);
+  margin-bottom: rem(10px);
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover {
+    color: #000;
+  }
+}
+
+.overlay .menu__item {
+  margin-right: 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

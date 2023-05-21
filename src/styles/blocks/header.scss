@@ -1,0 +1,41 @@
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-weight: 700;
+
+  @include tablets {
+    align-items: center;
+    padding: rem(26px) rem(25px) rem(26px) rem(28px);
+    background-color: $blue;
+  }
+}
+
+.logo {
+  fill: white;
+  width: rem(56px);
+  height: rem(40px);
+}
+
+.phone-number {
+  font-size: rem(22px);
+  display: flex;
+  align-items: center;
+}
+
+.header__phone-number {
+  @include tablets {
+    display: none;
+  }
+}
+
+.phone-number__icon {
+  width: rem(13px);
+  height: rem(15px);
+  margin-right: rem(6px);
+  fill: white;
+}
+
+.phone-number__text {
+  white-space: nowrap;
+}

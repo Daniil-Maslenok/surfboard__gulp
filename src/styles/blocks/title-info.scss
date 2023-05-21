@@ -1,0 +1,26 @@
+.title-info {
+  text-align: center;
+  margin-bottom: rem(50px);
+
+  @include phones {
+    margin-bottom: 15%;
+  }
+}
+
+.title-info__title {
+  margin-bottom: rem(20px);
+
+  @include phones {
+    margin-bottom: rem(10px);
+  }
+}
+
+.title-info__desc {
+  color: #666;
+  line-height: 1.3;
+  padding: 0 27%;
+
+  @include phones {
+    padding: 0 3%;
+  }
+}

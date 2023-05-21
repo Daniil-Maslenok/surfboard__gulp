@@ -1,0 +1,28 @@
+.modal-form {
+  display: none;
+
+  & .is-close-btn {
+    display: none;
+  }
+
+  & .fancybox__content {
+    padding: 0;
+  }
+}
+
+.modal-form__container {
+  background-color: #fff;
+  padding: rem(35px) rem(65px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-form__content {
+  margin-bottom: rem(15px);
+}
+
+.error-modal {
+  color: #ff0000;
+}

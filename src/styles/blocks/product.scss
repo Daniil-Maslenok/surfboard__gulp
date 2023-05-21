@@ -1,0 +1,168 @@
+.product__container {
+  max-width: 990px;
+  overflow: hidden;
+}
+
+.slider-area {
+  display: flex;
+  align-items: center;
+}
+
+.products {
+  display: flex;
+  width: 100%;
+  left: 0;
+  transition: 0.5s;
+  position: relative;
+}
+
+.products__item {
+  flex-shrink: 0;
+  padding: rem(30px) 0;
+}
+
+.product {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+
+  @include tablets {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.product__pic {
+  width: 50%;
+  object-fit: contain;
+  margin-right: 5%;
+  align-self: center;
+}
+
+.product__avatar {
+  max-width: 100%;
+  display: block;
+
+  // @include tablets {
+  //   height: rem(445px);
+  // }
+
+  // @include phones {
+  //   height: rem(321px);
+  // }
+
+  // @include phones-plus {
+  //   height: rem(320px);
+  // }
+}
+
+.product__content {
+  width: 40%;
+  padding: 0 rem(10px);
+  position: relative;
+
+  @include tablets {
+    width: 75%;
+    margin-left: 0;
+  }
+
+  @include phones {
+    width: 100%;
+  }
+}
+
+.product__title {
+  font-size: rem(36px);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #292929;
+  margin-top: rem(50px);
+
+  @include tablets {
+    margin-top: 0;
+    font-size: rem(30px);
+  }
+
+  @include phones {
+    margin-top: rem(45px);
+  }
+}
+
+.product__desc {
+  margin-top: rem(25px);
+  display: flex;
+  flex-direction: column;
+
+  @include tablets {
+    margin-top: rem(10px);
+  }
+
+  @include phones {
+    margin-top: rem(20px);
+    line-height: 1.42;
+  }
+}
+
+.product__text {
+  color: #666;
+  font-size: rem(18px);
+  margin-bottom: rem(24px);
+}
+
+.sizes {
+  display: flex;
+  color: #666;
+  font-size: rem(18px);
+  margin-bottom: rem(24px);
+  justify-content: center;
+  align-items: center;
+
+  @include tablets {
+    text-align: start;
+  }
+}
+
+.sizes__item {
+  flex: 1;
+  margin-right: rem(5px);
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include tablets {
+    flex: none;
+    margin-right: rem(55px);
+  }
+}
+
+.sizes__item--bold {
+  color: #000;
+  font-weight: 700;
+  display: block;
+}
+
+.commercial {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  @include tablets {
+    justify-content: center;
+  }
+}
+
+.commercial__price {
+  font-size: rem(60px);
+  line-height: 1;
+  font-weight: 300;
+  color: #151515;
+  margin-bottom: 1%;
+
+  @include tablets {
+    margin-right: 3%;
+  }
+}

@@ -1,0 +1,41 @@
+.parameters--wrapper {
+  display: flex;
+  position: relative;
+}
+
+.parameters {
+  background: #3a587e;
+  position: relative;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  width: rem(91px);
+  height: rem(91px);
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  padding: rem(5px);
+
+  @include tablets {
+    display: none;
+  }
+}
+
+.parameters--wrapper:hover .dropdown-info {
+  display: block;
+  opacity: 1;
+  right: 0;
+}
+.parameters--wrapper:hover .dropdown-info::before {
+  right: 0px;
+}
+
+.parameters__icon {
+  height: rem(38px);
+  width: rem(38px);
+  fill: #fff;
+}
+
+.parameters__text {
+  margin-top: rem(5px);
+}

@@ -1,0 +1,47 @@
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10000;
+  color: #fff;
+  font-size: rem(36px);
+  line-height: 2;
+  background-color: #333537;
+}
+
+.overlay-container {
+  padding: rem(40px) rem(40px);
+  display: flex;
+  flex-direction: column;
+
+  @include phones-plus {
+    padding: rem(40px) rem(35px);
+  }
+}
+
+.overlay__link--wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.overlay__link {
+  width: rem(35px);
+  height: rem(35px);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+  &:hover .overlay__close-elem {
+    opacity: 1;
+  }
+}
+
+.overlay__close-elem {
+  width: rem(20px);
+  height: rem(20px);
+  fill: #fff;
+  opacity: 70%;
+}
